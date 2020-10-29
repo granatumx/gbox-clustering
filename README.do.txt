@@ -1,5 +1,5 @@
 !bquote
-`gbox-py` is a gbox that provides a number of gboxes from Python. It is part of the standard gbox set.
+`gbox-clustering` is a gbox that provides a number of gboxes from Python. It is part of the standard gbox set.
 !equote
 
 ===== Prerequisites =====
@@ -7,6 +7,9 @@
 You mainly need a working copy of "Docker": "http://docker.com". It is used
 exclusively to manage system configurations for running numerous tools
 across numerous platforms.
+
+Cluster samples using a common clustering algorithm such as K-means or hierarchical clustering.
+Additional resources are available on [Wikipedia#Cluster_analysis](http://en.wikipedia.org/wiki/Cluster_analysis)
 
 ===== Installation =====
 
@@ -27,8 +30,8 @@ to deposit the preferences on the database. Since these gboxes are in fact docke
 pulled if they do not exist locally on the system. Convenience scripts are provided for installing specific gboxes.
 
 !bc sys
-$ gx run.sh                                  # Will start the database, taskrunner, and webapp
-$ gx installGbox.sh granatumx/gbox-py:1.0.0  # Install this gbox
+$ gx run.sh                                          # Will start the database, taskrunner, and webapp
+$ gx installGbox.sh granatumx/gbox-clustering:1.0.0  # Install this gbox
 
 # Now go to http://localhost:34567 and see this gbox installed when you add a step.
 !ec

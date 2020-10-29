@@ -49,7 +49,7 @@ def main():
         {
             'orient': 'split',
             'columns': ['Sample ID', 'Cluster Assignment'],
-            'data': [[x, y] for x, y in zip(assay.get('sampleIds'), fit_results.get('clusters_array'))],
+            'data': [{'Sample ID':x, 'Cluster Assignment':y} for x, y in zip(assay.get('sampleIds'), fit_results.get('clusters_array'))],
         },
         'table',
     )
