@@ -34,10 +34,9 @@ def main():
     fit_results = granatum_clustering.fit(**args_for_fit)
 
     fit_exp = fit_results.get('clusters')
-    print(fit_exp)
     gn.export_statically(fit_exp, 'Cluster assignment')
     newdictstr = ['"'+str(k)+'"'+", "+str(v) for k, v in fit_exp.items()]
-    gn.export("\n".join(newdictstr), 'Cluster assignment.csv'.format(group), kind='raw', meta=None, raw=True)
+    gn.export("\n".join(newdictstr), 'Cluster assignment.csv', kind='raw', meta=None, raw=True)
 
     md_str = f"""\
 ## Results
